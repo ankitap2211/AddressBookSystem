@@ -26,6 +26,9 @@ public class AddressBookMain {
                 case 3:
                     addressBook.deleteContact();
                     break;
+                case 4:
+                    addressBook.editContact();
+                    break;
             }
         } while (choice != 0);
     }
