@@ -20,6 +20,9 @@ public class AddressBookMain {
                 case 1:
                     addressBook.addContact();
                     break;
+                case 2:
+                    addressBook.displayContact();
+                    break;
             }
         } while (choice != 0);
     }

@@ -7,7 +7,10 @@ import java.util.Scanner;
 public class AddressBook {
     List<Contact> listcontact = new ArrayList<Contact>();
     Scanner sc = new Scanner(System.in);
-    public AddressBook() {}
+
+    public AddressBook() {
+    }
+
     public void addContact() {
         System.out.print("Enter First Name: ");
         String firstName = sc.nextLine();
@@ -28,5 +31,13 @@ public class AddressBook {
 
         Contact contact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
         listcontact.add(contact);
+    }
+
+    void displayContact() {
+        System.out.println("-------------------------------------------------------------------");
+        for (Contact contact : listcontact) {
+            System.out.println(contact);
+            System.out.println("-------------------------------------------------------------------");
+        }
     }
 }
