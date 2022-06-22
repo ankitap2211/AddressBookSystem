@@ -1,6 +1,7 @@
 package AddressBook;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -40,4 +41,21 @@ public class AddressBook {
             System.out.println("-------------------------------------------------------------------");
         }
     }
+    void deleteContact() {
+        boolean found = false;
+        System.out.println("Enter name to delete :");
+        String fName = sc.nextLine();
+        Iterator<Contact> iterator = listcontact.iterator();
+        while (iterator.hasNext()) {
+            Contact contact = iterator.next();
+            if (contact.getFirstName().equals(fName))
+                iterator.remove();
+            found = true;
+        }
+        if (!found) {
+            System.out.println("Record not found");
+        } else
+            System.out.println("The record is successfully deleted.....");
+    }
+
 }
